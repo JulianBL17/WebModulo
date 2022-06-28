@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/tableLayout.css"/>
+        <title>INICIO</title>
+        <h:graphicImage value="imagenes/Logoj.png"  width="101%" height="300px" />
+    </h:head>
+
+    <h:body>
+        
+        <table cellspacing="10px">
+            <tr>
+                <td id="top">
+                    <h:form>
+                        
+                        <p:menubar>
+                            
+                            <p:menuitem value="Index" outcome="index"/>
+                            <p:menuitem value="Formulario" outcome="Formulario"/>
+                            <p:menuitem value="Validaciones" outcome="Validaciones" />
+                            <p:menuitem value="Despegable" outcome="Despegable" />
+                            <p:menuitem value="Colores" outcome="Colores" />
+                            <p:menuitem value="Inplace" outcome="Inplace" />
+                            <p:menuitem value="Teclados" outcome="Teclados" />
+                            <p:menuitem value="Contraseñas" outcome="Contraseñas" />
+                            <p:menuitem value="Clasificación" outcome="Clasificación" />
+                            <p:menuitem value="Tiempo" outcome="Tiempo" />
+                            <p:menuitem value="Mapa" outcome="Mapa"/>
+                            
+                            
+                        </p:menubar>
+                        
+                    </h:form>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td id="content">
+                    <ui:insert name="content">Content</ui:insert>
+                </td>
+            </tr>
+        </table>
+    </h:body>
+
+</html>

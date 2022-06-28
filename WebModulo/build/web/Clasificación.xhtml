@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./template/plantilla.xhtml">
+
+            <ui:define name="content">
+               
+                <div class="card">
+    <h:form>
+        <p:growl id="messages" showDetail="true"/>
+
+        <h2 style="background-color: #c2dfef">BASICO</h2>
+        <p:rating value="#{clasificacionC.rating1}"/>
+        <br/>
+
+        <h2 style="background-color: #c2dfef">REMOTO</h2>
+        <p:rating value="#{clasificacionC.rating2}">
+            <p:ajax event="rate" listener="#{clasificacionC.onrate}" update="messages"/>
+            <p:ajax event="cancel" listener="#{clasificacionC.oncancel}" update="messages"/>
+        </p:rating>
+        <br/>
+        
+
+        <h2 style="background-color: #c2dfef">RAMDOM</h2>
+        <p:rating value="#{clasificacionC.rating3}" readonly="true"/>
+        
+        <br/>
+
+        <h2 style="background-color: #c2dfef">DESHABILITADO</h2>
+        <p:rating value="#{clasificacionC.rating3}" disabled="true"/>
+    </h:form>
+</div>
+                
+                
+                
+                
+                
+                
+                
+                
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

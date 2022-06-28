@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./template/plantilla.xhtml">
+
+            <ui:define name="content">
+                
+      <div class="card">
+    <h:form>
+        
+        <div class="ui-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="default" value="Diseño Predeterminado: "/>
+                <p:keyboard id="default" value="#{tecladoC.value1}"/>
+            </div>
+            <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="qwerty" value="Basico QWERTY: "/>
+                <p:keyboard id="qwerty" value="#{tecladoC.value2}" layout="qwertyBasic"/>
+            </div>
+            
+            <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="alphabetic" value="Dispocisión Alfabetica: "/>
+                <p:keyboard id="alphabetic" value="#{tecladoC.value3}" layout="alphabetic"/>
+            </div>
+            <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="custom1" value="Diseño personalizado 1: "/>
+                <p:keyboard id="custom1" value="#{tecladoC.value4}" layout="custom"
+                            layoutTemplate="prime-back,faces-clear,rocks-close"/>
+            </div>
+            <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="custom2" value="Diseño personalizado: 2: "/>
+                <p:keyboard id="custom2" value="#{tecladoC.value5}" layout="custom"
+                            layoutTemplate="create-space-your-close,owntemplate-shift,easily-space-spacebar"/>
+            </div>
+            <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="keypad" value="Teclado Predeterminado:"/>
+                <p:keyboard id="keypad" value="#{tecladoC.value6}" keypadOnly="true"/>
+            </div>
+            <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="password" value="Modo de contraseña:"/>
+                <p:keyboard id="password" value="#{tecladoC.value9}" password="true" keypadOnly="true"/>
+            </div>
+             <br/>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:outputLabel for="rtl" value="Completo: "/>
+                <p:keyboard id="rtl" value="#{tecladoC.value1}" dir="rtl"/>
+            </div>
+            <br/>
+        </div>
+    </h:form>
+</div>
+                
+   
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

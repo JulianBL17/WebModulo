@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+     
+
+    <body>
+        
+        <ui:composition template="./template/plantilla.xhtml">
+            
+              <ui:define name="content">
+                  
+        <h2 style="background-color: #c2dfef">FORMULARIO ADVANCE</h2>
+                  
+                   <div>
+        <label>Nombre</label> <br/> 
+        <p:inputText  type="text"  />
+    </div>
+                  
+   <br/>
+       
+    <div>
+        <label>Apellido</label> <br/> 
+        <p:inputText type="text" />
+    </div>
+     
+                  
+      <br/>  
+          
+    <div >
+        <label>Dirección</label> <br/> 
+        
+        <p:inputTextarea rows="4" />
+        
+    </div>
+          
+     <br/>
+                  
+    <div>
+        <label>Telefono</label> <br/> 
+        <p:inputText type="text" />
+    </div>
+                  
+     <br/>   
+         
+    <div>
+        
+        <label>Ciudad</label> <br/>
+        
+        <p:selectOneMenu>
+            <f:selectItem itemLabel="Select" itemValue="" />
+            <f:selectItem itemLabel="Arizona" itemValue="Arizona" />
+            <f:selectItem itemLabel="California" itemValue="California" />
+            <f:selectItem itemLabel="Colombia" itemValue="Colombia" />
+            <f:selectItem itemLabel="Florida" itemValue="Florida" />
+            <f:selectItem itemLabel="Ohio" itemValue="Ohio" />
+            <f:selectItem itemLabel="Washington" itemValue="Washington" />
+            
+        </p:selectOneMenu>
+        
+    </div>
+         
+         
+        <br/>
+        <div>
+            <p:button value="Enviar"/> 
+        </div>
+     
+                  
+                  
+            </ui:define>
+            
+        </ui:composition>
+        
+      
+       
+
+    </body>
+</html>
